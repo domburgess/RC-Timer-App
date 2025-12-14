@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RC Cafe Timer Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>🏎️ RC Cafe Timer Dashboard</h1>
+        <div id="next-available" class="timer-box">
+            Next Car Available In: <span id="next-timer">Loading...</span>
+        </div>
+    </header>
+
+    <section class="input-section">
+        <h2>Start New Session</h2>
+        <input type="text" id="receipt-code" placeholder="Enter Receipt Code (e.g., A1B2)">
+        <select id="duration-select">
+            <option value="20">20 Minutes</option>
+            <option value="30">30 Minutes</option>
+            <option value="60">60 Minutes</option>
+        </select>
+        <button id="start-session-btn">Start Timer</button>
+    </section>
+
+    <hr>
+
+    <section class="dashboard-section">
+        <h2>Active Cars</h2>
+        <div id="active-cars-list">
+            <p>Waiting for active sessions...</p>
+        </div>
+    </section>
+
+    <hr>
+
+    <section class="dashboard-section">
+        <h2>Available Cars</h2>
+        <div id="available-cars-list">
+            <p>Loading car list...</p>
+        </div>
+    </section>
+
+    <div id="time-up-overlay" class="hidden">
+        <div class="message-box">
+            <h2>TIME UP!</h2>
+            <h1 id="time-up-car-number"></h1>
+            <p>Please return your remote to the counter.</p>
+        </div>
+    </div>
+
+    <script type="module" src="./app.js"></script>
+</body>
+</html>
